@@ -1,17 +1,15 @@
 <?php
-// -------------------------------------------------------
-// REPLACE THIS BLOCK with your actual DB query
-// e.g. $guest = $db->query("SELECT * FROM users WHERE id = ?", [$_SESSION['user_id']])->fetch();
-// -------------------------------------------------------
-$guest = [
-    'id'         => 2,
-    'fullname'   => 'Kathleen Dimaano',
-    'email'      => 'kath@email.com',
-    'phone'      => '0999 999 9999',
-    'role'       => 'guest',
-    'created_at' => '2026-06-16 04:40:01',
-    'valid_id'   => null,
-];
+session_start();
+require 'db.php';
+
+$stmt = $pdo->prepare("SELECT * FROM users WHERE id = ?");
+$stmt->execute([3]); // hardcoded ID 2 for now
+$guest = $stmt->fetch();
+
+// if (!$guest) {
+//     header("Location: login.php");
+//     exit;
+// }
 
 $initials     = implode('', array_map(fn($w) => strtoupper($w[0]), explode(' ', $guest['fullname'])));
 $member_since = date('F Y', strtotime($guest['created_at']));
@@ -36,7 +34,7 @@ $is_staff     = $guest['role'] === 'admin';
       --bg-card:     #141416;
       --bg-card2:    #1A1A1D;
       --border:      rgba(201,168,76,.18);
-      --border-sub:  rgba(255,255,255,.07);
+      --border-sub:  hsla(0, 0%, 100%, 0.07);
       --text:        #F0EBE0;
       --text-mid:    #A09880;
       --text-soft:   #5C5848;
