@@ -1,5 +1,13 @@
-SYSTEM STRUCTURE
+### Contributors
+* Adonis Osias
+* Darell Cammagay
+* Darius Luna
+* Dion Sinangoat
+* Luiz Escalona
+* Lynsey Angeles
+* Renz Inocencio
 
+### System Structure
 ```bash
 index.php
 
