@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 SYSTEM STRUCTUR
 
 =======
@@ -13,7 +12,6 @@ SYSTEM STRUCTUR
 
 ### System Structure
 ```bash
->>>>>>> d83a2398d4f21e1b86e413aaf6d9dec06494cce1
 index.php
 
 register.php
@@ -41,7 +39,4 @@ includes/
 ├── footer-guest.php
 ├── footer-guest.css
 └── db.php
-<<<<<<< HEAD
-=======
 ```
->>>>>>> d83a2398d4f21e1b86e413aaf6d9dec06494cce1
