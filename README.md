@@ -1,6 +1,6 @@
 SYSTEM STRUCTURE
 
-'''bash
+```bash
 index.php
 
 register.php
@@ -28,4 +28,4 @@ includes/
 ├── footer-guest.php
 ├── footer-guest.css
 └── db.php
-'''
+```
